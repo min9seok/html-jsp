@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style type="text/css">
+p{
+	border: 1px solid gray;	
+}
+
+</style>
+<!-- <script type="text/javascript">
+ $(document).ready(function(){
+	$("#hide").click(function(){
+		$(".span").hide();
+	});
+	$("#show").click(function(){
+		$(".span").show();
+	});
+}) 
+</script> -->
+</head>
+<body>
+<xmp>
+ 1. html 모든 태그들은 유형에 따라 기본적으로 표시(display)값 존재
+ 2. display 
+  ㄱ. 블럭모드 : 항상 새로운 라인에서 시작
+             브라우저가 자동으로 여백 추가 
+             너비가 부모의 100% 설정
+             p,ul,li,div
+<!-- <address><article><aside><blockquote><canvas><dd><div>
+<dl><dt><fieldset><figcaption><figure><footer><form>
+<h1>-<h6><header><hr><li><main><nav><noscript><ol><p>
+<pre><section><table><tfoot><ul><video> -->             
+  ㄴ. 인라인모드 : 새로운 라인에서 시작 X
+               내용(content)에 따라 너비 지정
+               span
+<!-- <a><abbr><acronym><b><bdo><big><br><button><cite><code>
+<dfn><em><i><img><input><kbd><label><map><object>
+<output><q><samp><script><select><small><span><strong>
+<sub><sup><textarea><time><tt><var> -->
+ 3. div
+  ㄱ. 웹 페이지의 배치(layout)
+  ㄴ. 블럭모드
+  ㄷ. 다른 html 요소의 컨테이너 역할.               
+</xmp>
+<p>바ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ</p>
+<p>보ㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗ</p>
+<!-- 버튼들을 클릭할때 사용자 반응 처리  
+ 숨기고,보이고
+ - 클릭이벤트 발생 처리 
+ - on이벤트명
+-->
+<button id="hide">숨기기(hide)</button>
+<button id="show">보이기(show)</button>
+<br>
+<div class="span" id="span">
+<span id="sp01">고경림</span><br>
+<span id="sp02">이동현</span><br>
+<span id="sp03">신종혁</span><br>
+<span id="sp04">이지현</span><br>
+<span id="sp05">김정주</span><br>
+<span id="sp06">박민석</span><br>
+<span id="sp07">고경림</span><br>
+</div>
+<script type="text/javascript">
+$("button").first().click(function(){
+	//alert('숨기기 클릭');
+	$("span").hide();
+});
+$("button").last().click(function(){
+	//alert('보이기 클릭');
+	$("span").show();
+});
+
+</script>
+
+
+
+
+
+</body>
+</html>
