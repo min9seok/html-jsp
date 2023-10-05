@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>설문 보기</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+#rank.td3{
+	border: 1px solid;
+	text-align: right;
+}
+#rank td{
+ border: 1px solid;
+}
+div{
+	margin: 10px;
+}
+.td1{
+ width: 7%;
+ text-align: center;
+ border: 1px solid;
+}
+.td2{
+ width: 50%;
+ border: 1px solid;
+}
+.hidden{
+ height: 17px;
+}
+button{
+ float: right;
+ color: black;
+}
+</style>
+</head>
+<body>
+<div id="in" align="right" style="width: 100%;height: 50px"> 
+로그인
+</div>
+<div style="margin:10px; width: 100% ">
+설문 보기
+</div>
+<div style="border: 1px solid; height: 100%">
+<table>
+<tr>
+<td class="td1">질문</td>
+<td colspan="5" class="td2">가장 좋아하는 여자 연예인은?</td>
+</tr>
+<tr>
+<td class="td1">작성자</td>
+<td class="td2">관리자</td>
+<td class="td1">작성일</td>
+<td class="td2">2006-03-05 오전 1:30:45</td>
+</tr>
+<tr>
+<td class="td1">시작일</td>
+<td class="td2">2006-03-01</td>
+<td class="td1">종료일</td>
+<td class="td2">2006-05-01</td>
+</tr>
+<tr>
+<td class="td1">상태</td>
+<td class="td2">진행중</td>
+<td class="td1">항목수</td>
+<td class="td2">5</td>
+</tr>
+<tr>
+<td class="td1" rowspan="11" style="border-left: 1px solid; border-top: 1px solid; border-right: 1px solid;">항목</td>
+<td><input type="radio" value="배슬기">배슬기</td>
+</tr>
+<tr>
+<td><input type="radio" value="김옥빈">김옥빈</td>
+</tr>
+<tr>
+<td><input type="radio" value="아이비 꺄~~~~~~~~ 사 랑 해 요 아 이 비">아이비 하~~~~~~~~ 사. 랑. 해. 요. 아. 이. 비.</td>
+<tr>
+</tr>
+<tr>
+<td><input type="radio" value="한효주">한효주</td>
+</tr>
+<tr>
+<td><input type="radio" value="김선아">김선아</td>
+</tr>
+<tr>
+<td class="hidden" style="height: 22px"></td>
+</tr>
+<tr>
+<td class="hidden"></td>
+</tr>
+<tr>
+<td class="hidden"></td>
+</tr>
+<tr>
+<td class="hidden"></td>
+</tr>
+<tr>
+<td class="hidden"></td>
+</tr>
+</table>
+<button id ="list">목록</button>
+<button style="margin-right:5px;">투표하기</button>
+</div>
+<div>
+<table id="rank" style=" margin-top:50px;width: 100%">
+<tr>
+<td class="td3">배슬기</td>
+<td><svg style="
+    width: 100px;
+    height: 20px;">
+       <rect width="100" height="20"></rect>
+    </svg>
+    2(28.57%)</td>
+<tr>
+<td class="td3">김옥빈</td>
+<td>0(0%)</td>
+<tr>
+<td class="td3">아이비 꺄~~~~~~~~ 사. 랑. 해. 요. 아. 이. 비.</td>
+<td><svg style="
+    width: 200px;
+    height: 20px;">
+       <rect width="200" height="20"></rect>
+    </svg>
+    4(57.14%)</td>
+<tr>
+<td class="td3">한효주</td>
+<td><svg style="
+    width: 50px;
+    height: 20px;">
+       <rect width="50" height="20"></rect>
+    </svg>
+    1(14.29%)</td>
+<tr>
+<td class="td3">김선아</td>
+<td>0(0%)</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript">
+$("#in").click(function(){	
+	alert("로그인함");
+	location.href = 'survey_view_admin.html';	
+});
+$("#list").click(function(){
+	location.href = 'survey_list.html';	
+});
+</script>
+</body>
+</html>

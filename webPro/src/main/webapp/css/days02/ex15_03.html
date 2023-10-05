@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style type="text/css">
+.box{
+	border: 1px solid gray;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+}
+</style>
+<style type="text/css">
+/* :nth-child(1) */
+div:nth-of-type(1){
+	background-color: red;
+	position: static; /* 기본값 */	
+}
+div:nth-of-type(2){
+	background-color: green;
+	position: relative; /* 상대좌표, 기준점 */
+	left: 20px; top:20px;
+}
+div:nth-of-type(3){
+	background-color: blue;
+	position: fixed; /* 고정, 항상 같은 위치 */
+	right: 10px; bottom: 10px;
+}
+/* div:nth-of-type(4){ */
+div:last-of-type{
+	background-color: yellow;	
+	position: absolute; /* 절대좌표, 기준점 */
+	/* 가장 가까운 부모 기준 좌표 */
+	left: 20px; top:20px;
+	
+}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+for (var i = 1; i <= 5; i++) {
+	var div = document.createElement("div");
+	div.innerText = "Box - "+ i;
+	div.className = "box";
+	document.body.appendChild(div);	
+}
+</script>
+</body>
+</html>

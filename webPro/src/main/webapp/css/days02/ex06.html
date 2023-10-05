@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style type="text/css">
+body{
+	color: blue;
+	background-color: lightgrey;
+}
+h3{
+	/* color: rgb(0,255,0); */
+	background-color: black;
+	color:white;
+/* 텍스트 가로 정렬 */
+	text-align: center;	
+	
+}
+p#p1{
+	border: 1px solid black;
+	padding: 5px;
+	width: 250px;
+	height: 100px;
+	
+	text-align:justify;
+	
+	overflow: hidden;
+}
+div{
+	color:red;
+/* 텍스트의 방향 */	
+	direction: rtl;
+}
+</style>
+<style type="text/css">
+/*텍스트에서 이미지의 vertical-align 수직 정렬 */
+img.a{vertical-align: baseline;}
+img.b{vertical-align: text-top;}
+img.c{vertical-align: text-bottom;}
+img.d{vertical-align: sub;}
+img.e{vertical-align: super;}
+
+</style>
+</head>
+<body>
+<h3>css 텍스트</h3>
+<pre>
+ [css 텍스트 서식 지정]
+  1. 색상 : 표준 색상(140), #16진수, rgb
+  2. 정렬
+    text-algin 수평정렬
+    text-align-last
+    direction 
+    unicode-bidi 텍스트의 방향 변경
+    vertical-align 수직정렬
+</pre>
+<!-- div>lorem5 -->
+<div>Lorem ipsum dolor sit amet.</div>
+<!-- p#p1>lorem -->
+<p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam doloremque quos cumque perferendis laudantium voluptatibus consequatur iure iusto similique sequi nesciunt reiciendis assumenda quidem voluptas provident ea accusantium distinctio velit.</p>
+<!-- p*5>lorem5 -->
+<p>Lorem ipsum <img src="../images/sqpurple.gif" class="a" style="width: 9px;height: 9px"> dolor sit amet.</p>
+<p>Dicta incidunt <img src="../images/sqpurple.gif" class="b" style="width: 9px;height: 9px"> laudantium praesentium corporis!</p>
+<p>Illum commodi <img src="../images/sqpurple.gif" class="c" style="width: 9px;height: 9px"> nisi quidem quas?</p>
+<p>Voluptate repellat <img src="../images/sqpurple.gif" class="d" style="width: 9px;height: 9px"> excepturi unde sapiente.</p>
+<p>Molestias quasi <img src="../images/sqpurple.gif" class="e" style="width: 9px;height: 9px"> culpa fugiat iste!</p>
+</body>
+</html>
+
+
+

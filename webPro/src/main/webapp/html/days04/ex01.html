@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){	
+	
+
+});
+</script>
+</head>
+<body>
+<h3>ex01.html, ex01_ok.jsp - html form( 입력 양식 )</h3>
+<fieldset>
+<form action="ex01_ok.jsp" method="GET" target="_blank">
+ First Name :
+<input type="text" id="fname" name="fname" value="고" autofocus><br>
+<label for="lname">Last Name : </label> 
+<input type="text" id="lname" name="lname" value="림"><br>
+<input type="submit" value="넘겨버리기">
+
+ <!-- data [list] 요소 : 옵션 목록 지정 -->
+ <input list="browsers">
+ <datalist id="browsers">
+ <option value="IE"> 
+ <option value="Firefox">
+ <option value="Chrome">
+ <option value="Opera">
+ </datalist>
+</form>
+</fieldset>
+<!--
+이전에 입력한 값들은 유지 X ( 상태관리 X )
+-->
+<!-- a target 속성 : _self, _blank, _parent, framename, _top -->
+<!-- autocomplete="on" 
+자동완성이 켜져있으면 사용자가 이전에 입력한 갓을 기반으로 자동으로 값을 완성 -->
+<!-- novalidate="novalidate" 입력값에 유효성 검사를 하지 않겠다. -->
+
+<form action="" method="POST" target="_blank" 
+      autocomplete="on"
+      novalidate="novalidate"> 
+<p>좋아하는 동물은 ? </p>
+<input type="checkbox" checked name="animal" value="강얼쥐">강아지<br>
+<input type="checkbox" checked name="animal" id="cat" value="냥아치"><label for="cat">고양이</label><br>
+<input type="checkbox" name="animal" value="도마뱀">도마뱀<br>
+
+<p>가장 좋아하는 과목은 ? </p>
+<input type="radio" checked="checked" name="subject" value="자바싫엉">JAVA<br>
+<input type="radio" name="subject" id="oracle" value="오라클싫엉"><label for="oracle">ORACLE</label><br>
+<input type="radio" name="subject" value="좋은듯">JSP<br>
+
+Email : <input name="email" type="email" value="a@a"><br>
+부서를 선택하세요? <br>
+<!-- multiple="multiple" 다중 선택
+size ="" : 표시되는 항목 수 -->
+<select onchange="alert('경고창')" id="select" name="deptno" multiple>
+<option value="10">ACCOUNTING</option>
+<option value="20">RESEARCH</option>
+<option value="30" selected="selected">SALES</option>
+<option value="40">OPERATIONS</option>
+</select><br>
+여러 라인의 텍스트 입력 : <br>
+<!-- rows : 텍스트 영역에 표시되는 라인 수 
+cols : 텍스트 영역에 표시되는 너비 지정 -->
+<!-- input 요소는 value 속성에 값을 지정 -->
+<!-- <textarea name="content" rows="10" cols="50">시작/닫기 태그 사이에 텍스트 입력</textarea><br> -->
+<textarea name="content" style="width: 600px; height: 200px">시작/닫기 태그 사이에 텍스트 입력</textarea><br>
+<!-- 클릭 가능한 버튼을 정의, 항상 type 속성 지정 -->
+<button type="button" onclick="alert('버튼클릭중')">클릭</button>
+<button type="submit">넘기자구</button>
+<button type="reset" onclick="location.reload();" >다시입력</button>
+<!-- <input type="submit" value="넘겨볼까">
+<input type="reset" value="다시입력"> -->
+</form>
+<!-- fieldset 요소는 관련 데이터를 양식으로 그룹화하는 데 사용.
+legend 요소 -->
+<pre>
+1. html form :
+ 모든 사용자의 입력 정보를 
+ 수집하는데 사용되는 태그
+2. 입력한 정보를 서버에 전송
+ ( submit == 제출하다. )
+3. form 태그 : 컨테이너
+4. 한 줄의 텍스트 입력
+5. 꼬리표 : label
+   ㄴ 레이블 정의
+   ㄴ 라디오버튼, 체크박스를 클릭할 때 입력 태그에 포커스를 맞출 때
+   ㄴ for , id 속성 설정 
+6.
+http://localhost/webPro/html/days04/
+ex01_ok.jsp
+? 요청파라미터 == 쿼리 스트링 GET 방식
+fname=%EA%B3%A0
+&
+lname=%EB%A6%BC
+7. form method="GET/POST"
+get = ?이름=값 URL 추가 , 보안 X, 길이제한(2048자), 북마크 기능 O 
+      안전하지 않은 데이터 전송할 때 적합
+POST = http 요청 body(몸체) 추가, 크기제한 X, 북마크 기능 X
+      민감한 데이터, 개인정보 전송할 때 적합   
+</pre>
+
+
+
+</body>
+</html>
