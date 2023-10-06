@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style type="text/css">
+* {
+	box-sizing: border-box;
+}
+
+.box {
+	width: 30%;
+	height: 200px;
+	padding: 30px;
+	float: left;
+}
+</style>
+<style type="text/css">
+/* :의사클래스 ::의사요소 */
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+</style>
+</head>
+<body>
+	<div class="clearfix">
+		<!-- .box*3>p>lorem4 -->
+		<div class="box" style="background-color: #bbb">
+			<p>Lorem ipsum dolor sit.</p>
+		</div>
+		<div class="box" style="background-color: #ccc">
+			<p>Quos minima praesentium velit.</p>
+		</div>
+		<div class="box" style="background-color: #ddd">
+			<p>Fugit inventore voluptates. Unde!</p>
+		</div>
+	</div>
+	<!-- p>strong{Note:}+lorem -->
+	<p>
+		<strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur
+		adipisicing elit. Numquam aliquam quod reprehenderit dolore
+		voluptatibus perferendis quis esse eveniet consequatur a possimus
+		laborum deleniti ducimus quidem facilis illum minus recusandae omnis.
+	</p>
+</body>
+</html>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -260,4 +261,268 @@
 	
 	
 </body>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h3>ex09.html</h3>
+<pre>
+  Emmet - CSS 선택자 구문 유사
+  Ctrl + E 
+</pre>
+<!-- ul>li*5>lorem -->
+<ul>
+	<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam incidunt laborum porro quis quos tempora atque quia eum! Possimus neque necessitatibus sequi deleniti quae culpa quam. Assumenda debitis repellendus soluta!</li>
+	<li>Esse aperiam veritatis autem eius earum dolore rem id minima quos similique placeat voluptatum explicabo cumque tenetur voluptatibus sunt nisi saepe dignissimos ipsa eveniet cupiditate architecto laboriosam hic facere natus?</li>
+	<li>Quasi nulla reprehenderit architecto ullam possimus sit error quo similique blanditiis voluptate neque odio quod odit optio nihil perspiciatis libero maiores nisi officia repellat aliquam ad tenetur modi atque sed!</li>
+	<li>Voluptas quibusdam tempora a reiciendis possimus repellat non ut esse doloribus unde expedita praesentium amet natus porro molestias qui autem. Assumenda eveniet dicta amet culpa explicabo quasi blanditiis maiores rem.</li>
+	<li>Asperiores reprehenderit aperiam ipsum odio tempore aliquid ullam voluptates illo ex mollitia veritatis consectetur ipsam quibusdam commodi et quasi sit facilis quisquam eius impedit neque nobis perferendis. Maiores vel reiciendis.</li>
+</ul>
+<!-- ul>li*5>lorem10 -->
+<ul>
+	<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus molestiae!</li>
+	<li>Omnis libero non inventore possimus quae est soluta officia quia.</li>
+	<li>Pariatur officia numquam officiis ex aliquam autem deserunt debitis animi!</li>
+	<li>Odio corporis animi provident quo officia enim natus eius ab.</li>
+	<li>Incidunt expedita repellat provident inventore perspiciatis consequuntur est ducimus earum.</li>
+</ul>
+
+
+<!-- 중첩연산자 >  -->
+<!-- div>ul -->
+<div>
+	<ul></ul>
+</div>
+<!-- div>ul>li -->
+<div>
+	<ul>
+		<li></li>
+	</ul>
+</div>
+<!-- 중첩연산자 +  형제,자매 -->
+<!-- div+ul -->
+<div></div>
+<ul></ul>
+<!-- div+ul>li -->
+<div></div>
+<ul>
+	<li></li>
+</ul>
+<!-- div+ul+ol+p+bq -->
+<div></div>
+<ul></ul>
+<ol></ol>
+<p></p>
+<blockquote></blockquote>
+<!-- 중첩연산자 ^  등반 -->
+<!-- (div>ul>li)+p -->
+<div>
+	<ul>
+		<li></li>
+	</ul>
+</div>
+<p></p>
+<!-- div>ul>li^p -->
+<div>
+	<ul>
+		<li></li>
+	</ul>
+	<p></p>
+</div>
+<!-- div>ul>li^^p -->
+<div>
+	<ul>
+		<li></li>
+	</ul>
+</div>
+<p></p>
+<!-- div+div>p>span^^em>bq -->
+<div></div>
+<div>
+	<p><span></span></p>
+</div>
+<em>
+	<blockquote></blockquote></em>
+<!-- div>ul>li+li+li+li -->	
+<div>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>	
+<!-- div>ul>li*4 -->
+<div>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+<!-- div>(ul>li*4)*2 -->	
+<div>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+<!-- div>ul*2>li*4 -->	
+<div>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+<!-- div>header>ul>li*2>a^^footer>p -->	
+<div>
+	<header>
+		<ul>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+		</ul>
+	</header>
+	<footer>
+		<p></p>
+	</footer>
+</div>
+<!-- div>(header>ul>li*2>a)+(footer>p) -->
+<div>
+	<header>
+		<ul>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+		</ul>
+	</header>
+	<footer>
+		<p></p>
+	</footer>
+</div>	
+<!-- 속성 연산자 : 속성 추가 -->
+<!-- div#header -->
+<div id="header"></div>\
+<!-- #header.box.member.team -->
+<div id="header" class="box member team"></div>
+<!-- img -->
+<img src="" alt="" />
+<!-- img[width=""][height=""] -->
+<img src="" alt="" width="" height="" />
+<!-- img[width][height] -->	
+<img src="" alt="" width="" height="" />
+<!-- img[width height] -->
+<img src="" alt="" width="" height="" />
+<!-- td[colspan="3" title=dname] -->
+<td colspan="3" title="dname"></td>
+<!-- ul>li{item}*5 -->
+<ul>
+	<li>item</li>
+	<li>item</li>
+	<li>item</li>
+	<li>item</li>
+	<li>item</li>
+</ul>
+<!-- ul>li.box{item}*5 -->
+<ul>
+	<li class="box">item</li>
+	<li class="box">item</li>
+	<li class="box">item</li>
+	<li class="box">item</li>
+	<li class="box">item</li>
+</ul>
+<!-- ul>li.box{item-$}*5 -->
+<ul>
+	<li class="box">item-1</li>
+	<li class="box">item-2</li>
+	<li class="box">item-3</li>
+	<li class="box">item-4</li>
+	<li class="box">item-5</li>
+</ul>	
+<!-- ul>li.box${item$$$}*5 -->	
+<ul>
+	<li class="box1">item001</li>
+	<li class="box2">item002</li>
+	<li class="box3">item003</li>
+	<li class="box4">item004</li>
+	<li class="box5">item005</li>
+</ul>
+<!-- ul>li{item$@-}*5	 -->
+<ul>
+	<li>item5</li>
+	<li>item4</li>
+	<li>item3</li>
+	<li>item2</li>
+	<li>item1</li>
+</ul>
+<!-- ul>li{item$@11}*5 -->	
+<ul>
+	<li>item11</li>
+	<li>item12</li>
+	<li>item13</li>
+	<li>item14</li>
+	<li>item15</li>
+</ul>
+<!-- a{naver} -->
+<a href="">naver</a>
+<!-- p{Click }>a{hear}+{ to continue} -->	
+<p>Click<a href="">hear</a> to continue</p>	
+<hr>
+<!-- table[style="border:solid 1px gray;width: 100%"]>tr*3>td*4 -->
+<!-- table[style="border:solid 1px gray;width: 100%"]>tr*3>td*4>lorem1 -->
+<table style="border:solid 1px gray;width: 100%">
+	<tr>
+		<td>Lorem.</td>
+		<td>Maiores!</td>
+		<td>Nemo!</td>
+		<td>Debitis!</td>
+	</tr>
+	<tr>
+		<td>Lorem.</td>
+		<td>Odio?</td>
+		<td>Ea?</td>
+		<td>Optio.</td>
+	</tr>
+	<tr>
+		<td>Lorem.</td>
+		<td>Est.</td>
+		<td>Consequatur.</td>
+		<td>Laborum.</td>
+	</tr>
+</table>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+>>>>>>> refs/remotes/origin/main
 </html>

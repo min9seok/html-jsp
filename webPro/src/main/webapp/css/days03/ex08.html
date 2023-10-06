@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style type="text/css">
+body{
+	font-family: Arial, Verdana, sans-serif;
+}
+*{
+	box-sizing: border-box;
+}
+.open-button{
+	background-color: #555;
+	color: white;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	opacity: 0.8;
+	
+	position: fixed;
+	right: 28px;
+	bottom: 28px;
+	width: 280px;
+}
+.open-button:hover{
+	opacity: 1;
+}
+.form-popup{
+	border: 3px solid #f1f1f1;
+	position: fixed;
+	right: 15px;
+	bottom: 0;	
+	z-index: 10;
+	display: none;			
+}
+.form-container{
+	max-width: 300px;
+	padding: 10px;
+	background-color: white;
+}
+/* .form-container input[type=text]
+,.form-container input[type=password]{
+
+} */
+#email,#psw{
+	width: 100%;
+	border: none;
+	background-color: #f1f1f1;
+	margin: 5px 0 22px 0;
+	padding: 15px;
+}
+#email:focus,#psw:focus{	
+	background-color: #ddd;	
+	outline: none;
+}
+.btn{	
+	background-color: #4caf50;
+	color: white;	
+	border: none;
+	padding: 16px 20px;
+	cursor: pointer;
+	width: 100%;
+	margin-bottom: 10px;
+	opacity: 0.8;
+}
+.btn.cancel{
+	background-color: red;
+}
+.btn:hover,open-button:hover{
+	opacity: 1;
+}
+</style>
+</head>
+<body>
+<h3>팝업(popup) 폼(form)</h3>
+<button class="open-button">Open Form</button>
+<div class="form-popup" id="myForm">
+  <form action="" class="form-container" autocomplete="off">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" 
+    id="email"name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" 
+    id="psw"name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel">Close</button>
+  </form>
+</div>
+<script type="text/javascript">
+/* $(".open-button").click(function(){
+	$(".form-popup").show();
+}); */
+ document.querySelector(".open-button").onclick = function(){
+	/* $(".form-popup").css("display","block"); */
+	document.querySelector("#myForm").style.display = "block";
+	/* $("#email").focus(); */
+	document.querySelector("#email").focus();
+} 
+document.querySelector(".btn.cancel").onclick = function(){
+	document.querySelector("#myForm").style.display = "none";
+	document.querySelector("#email").value="";
+	document.querySelector("#psw").value="";
+}
+</script>
+</body>
+</html>

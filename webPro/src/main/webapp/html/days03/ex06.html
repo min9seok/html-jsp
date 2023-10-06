@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -93,4 +94,101 @@ div#section::after{
 </div>
 
 </body>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style type="text/css">
+ *{
+ 	box-sizing: border-box;
+ }
+ body{
+ 	font-family: Arial, Helvetica, sans-serif;
+ }
+ div#header{
+ 	background-color: #666;
+ 	color:white;
+ 	padding: 30px;
+ 	text-align: center;
+ 	font-size: 35px;
+ }
+  div#footer{
+ 	background-color: #777;
+ 	color:white;
+ 	padding: 20px;
+ 	text-align: center;
+ 	font-size: 25px;
+ }
+</style>
+<style type="text/css">
+/* div#section{ border:1px solid red; } */
+div#nav{
+	width: 30%;
+	background-color: #ccc;
+	height: 500px;
+	padding: 20px;
+	
+	float: left;
+}
+div#article{
+	width: 70%;
+	background-color: #f1f1f1;
+	padding: 20px;
+	min-height: 500px;
+	float: left;	
+}
+</style>	
+<style type="text/css">
+div#section::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+</style>
+<!-- CSS 반응형 웹 구현 : 미디워쿼리 -->
+<style type="text/css">
+	@media screen and (max-width:800px)  {
+	div#nav , div#article{
+		width: 100%;
+		height: auto;
+	}	
+}
+</style>
+</head>
+<body>
+	<h2>div(layout)+css</h2>
+	<div id="header">
+		<h2>Cites-시멘틱태그(sementic elements)</h2>
+	</div>
+	<div id="section">
+		<div id="nav">
+			<ul>
+				<li><a href="#">배</a></li>
+				<li><a href="#">고</a></li>
+				<li><a href="#">파</a></li>
+			</ul>
+		</div>
+		<div id="article">
+			<h2>생</h2>
+			<p>각</p>
+			<p>중</p>
+			<h2>뭐</h2>
+			<p>먹</p>
+			<p>지</p>
+			<h2>생</h2>
+			<p>각</p>
+			<p>중</p>
+		</div>
+	</div>
+<!-- <div style="clear:both;"></div> -->
+<div id="footer">
+<h2>Footer</h2>
+</div>
+
+</body>
+>>>>>>> refs/remotes/origin/main
 </html>
