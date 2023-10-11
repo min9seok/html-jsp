@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style type="text/css">
+p {
+	width: 200px;
+	height: 200px;
+	border: 1px solid green;
+	padding: 20px;
+}
+p:first-of-type {
+	background-color: red;
+ 	border-top-left-radius: 15px;
+	border-top-right-radius: 50px;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-redius: 5px; 	
+}
+p:nth-of-type(2) {
+	 background: url(../images/paper.gif) left top repeat; 
+	border-radius: 0 50%;
+	background-color: yellow;
+}
+p:last-of-type {
+	background-color: green;
+	border: 2px solid #73da21;
+	border-top-left-radius: 15px;
+	border-bottom-right-redius: 15px; 
+}
+</style>
+</head>
+<body>
+<pre>
+  둥근 모서리 - border-redius 
+</pre>
+<!-- p*3>lorem3 -->
+<p>Lorem ipsum dolor.</p>
+<p>Perspiciatis quidem illo.</p>
+<p>Id hic temporibus!</p>
+</body>
+</html>

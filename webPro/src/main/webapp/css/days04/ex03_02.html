@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style type="text/css">
+button {
+	background-color: orange;
+	display: inline-block;
+	padding: 5px;
+	border: none;		
+	color: white;
+}
+/* button:hover {
+	background-color: aqua;
+} */
+</style>
+</head>
+<body>
+<!-- button*3>{마우스 롤오버 효과} -->
+<button id="b1">마우스 롤오버 효과</button>
+<button id="b2">마우스 롤오버 효과</button>
+<button id="b3">마우스 롤오버 효과</button>
+<script type="text/javascript">
+//1.	document.getElementById()
+//2. 첫 번째 요소만 참조    document.querySelector("button")
+//3. 모든 요소 참조      document.querySelectorAll("button")
+//                    document.getElementsByTagName("button")
+/* $("button").mouseover(function(){
+	$(this).css("background-color","aqua");
+}).mouseout(function(){
+		$(this).css("background-color","orange");
+	});  */
+$("button").hover(
+	function() {
+		$(this).css("background-color", "aqua");
+	}, function() {
+		$(this).css("background-color", "orange");
+	});
+</script>
+</body>
+</html>

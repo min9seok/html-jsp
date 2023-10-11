@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style type="text/css">
+ul {
+	margin-left: 20px;
+	color: blue;
+}
+li {
+	cursor: default;
+}
+span {
+	color: red;
+}
+</style>
+</head>
+<body>
+<!-- ul>li*4>lorem1 -->
+<ul>
+	<li>Lorem.</li>
+	<li>Excepturi.</li>
+	<li>Repellat.</li>
+	<li>Hic.</li>
+</ul>
+<script type="text/javascript">
+	$("li").hover(
+		function(){
+			$(this).append("<span>***</span>");	
+		}
+		,function(){
+			$(this).find("span").last().remove();	
+		}
+	);
+</script>
+</body>
+</html>

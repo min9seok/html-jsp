@@ -5,8 +5,31 @@
 <title>Insert title here</title>
 <link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style type="text/css">
+p::first-letter {
+	color: red;
+	font-variant: small-caps;	
+}
+p::first-line {
+	color: blue;
+	font-size: x-large;
+}
+/* 요소의 내용 앞에 일부 내용 삽입 */
+h3::before {
+	content: url("../images/arr.git");	
+}
+/* 요소의 내용 뒤에 일부 내용 삽입 */
+h3::after {
+	content: url("../images/arr.git");	
+}
+::selection{
+	color: red;
+	background-color: yellow;
+}
+</style>
 </head>
 <body>
+<h3>::의사요소 설명</h3>
 <pre>
   :의사클래스(상태) 
   ::의사요소 ( 지정된 일부분 ) - 스타일 지정
@@ -14,5 +37,6 @@
    2) 요소의 내용의 앞, 뒤 콘텐츠 삽입
   형식) selector::의사요소{}
 </pre>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit quas obcaecati ex laboriosam recusandae sint asperiores laudantium non consequuntur voluptatibus animi officiis repellat quam. Accusamus alias magnam aliquid saepe nulla.</p>
 </body>
 </html>

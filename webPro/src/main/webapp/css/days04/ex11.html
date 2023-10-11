@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style type="text/css">
+p {
+	width: 200px;
+	border: 1px solid;
+}
+.to2 {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: clip;
+}
+.to3 {
+	white-space: nowrap;
+ 	overflow: hidden; 
+	text-overflow: ellipsis;
+}
+p.to3:hover {
+	overflow: visible;
+}
+.to4 {
+ 	word-break: break-all; 
+	word-wrap: break-word; 
+}
+</style>
+</head>
+<body>
+<pre>
+  [텍스트 효과]
+  1. text-overflow
+    - 텍스트 오버플로워 지정
+  2. word-wrap
+    - 하나의 단어 너무 길어서 너비보다 오버플로우
+    - 강제 줄 바꿈 / 자동 줄 바꿈
+  3. word-break
+    - 줄 바꿈 규칙
+  4. writing-mode ex11_02
+    - 쓰기 모드
+</pre>
+<!-- p.to$*3>lorem10 -->
+<p class="to1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores veritatis!</p>
+<p class="to2">Officiis nobis odit consequatur aliquam deleniti cupiditate facere porro tempora!</p>
+<p class="to3">Ipsa eligendi dolores commodi non magni quae asperiores sit perferendis?</p>
+<p class="to4">Ipsa eligendeligendeligendidolorescommodinonmagni quae asperiores sit perferendis?</p>
+
+
+</body>
+</html>
