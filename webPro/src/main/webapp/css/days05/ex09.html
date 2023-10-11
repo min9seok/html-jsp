@@ -6,8 +6,43 @@
 <title>Insert title here</title>
 <link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style type="text/css">
+* {
+	box-sizing: border-box;
+}
+.flex-container {
+	font-size: 30px;
+	text-align: center;
+	
+	display: flex;
+	flex-wrap: wrap;
+}
+.flex-container .flex-item-left {
+	background-color: #f1f1f1;
+	padding: 10px;
+	flex: 50%;
+}
+.flex-container .flex-item-right {
+	background-color: aquamarine;
+	padding: 10px;
+	flex: 50%;
+}
+</style>
+<style type="text/css">
+	@media (max-width:800px) {
+	.flex-container .flex-item-left ,.flex-container .flex-item-right {
+		flex:100%;
+	}
+}
+</style>
 </head>
 <body>
-
+<h3>반응형 flexbox</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi at pariatur nostrum omnis obcaecati incidunt magnam asperiores nulla perspiciatis esse molestiae vel totam quaerat reiciendis similique aperiam fugiat dolorum. Reiciendis.</p>
+<!-- .flex-container>.flex-item*2>{$} -->
+<div class="flex-container">
+	<div class="flex-item-left">1</div>
+	<div class="flex-item-right">2</div>
+</div>
 </body>
 </html>
