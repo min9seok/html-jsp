@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<link rel="stylesheet" href="/webPro/resources/cdn-main/example.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/webPro/resources/cdn-main/example.js"></script>
+<style type="text/css">
+.material-symbols-outlined {
+	vertical-align: text-bottom;
+}
+</style>
+</head>
+<body>
+<header class="sticky">
+<h1 class="main">
+	<a href="#" style="position: absolute;top:30px;">ky Home</a>
+</h1>
+<ul>
+	<li><a href="#">로그인</a></li>
+	<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<h3><span class="material-symbols-outlined">view_list</span> javascript days01</h3>
+<div>
+<xmp class="code">
+  전구에 마우스를 올리면 전구 ON
+  전구에 마우스를 내리면 전구 OFF
+ </xmp>
+<button id="btn1">Turn ON</button>
+<button id="btn2">Turn OFF</button>
+<br>
+<img>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("img").attr("src","/webPro/javascript/images/pic_bulboff.gif");	
+// 	$("#btn1").css("display","inline-block");
+// 	$("#btn1").show();	
+// 	$("button").first().show();
+	
+// 	$("#btn2").css("display","none");
+// 	$("#btn2").hide();
+	$("button").last().hide();
+// $("#btn1").click(function(){
+$("button").first().click(function(){
+	$("img").attr("src","/webPro/javascript/images/pic_bulbon.gif");	
+// 	$("#btn1").css("display","none");
+// 	$("#btn1").hide();	
+// 	$("button").first().hide();
+
+// 	$("#btn2").css("display","inline-block");
+// 	$("#btn2").show();
+// 	$("button").last().show();
+	$(this).hide().next().show();
+});
+// $("#btn2").click(function(){
+$("button").last().click(function(){
+	$("img").attr("src","/webPro/javascript/images/pic_bulboff.gif");	
+// 	$("#btn1").css("display","inline-block");
+// 	$("#btn1").show();
+// 	$("button").first().show();
+
+// 	$("#btn2").css("display","none");
+// 	$("#btn2").hide();
+// 	$("button").last().hide();
+	$(this).hide().prev().show();
+});
+$("img").hover(function() {
+	$("img").attr("src","/webPro/javascript/images/pic_bulbon.gif");
+}, function() {
+	$("img").attr("src","/webPro/javascript/images/pic_bulboff.gif");
+})
+});
+
+</script>
+</body>
+</html>
