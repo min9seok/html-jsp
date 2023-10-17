@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<link rel="stylesheet" href="/webPro/resources/cdn-main/example.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/webPro/resources/cdn-main/example.js"></script>
+<style type="text/css">
+.material-symbols-outlined {
+	vertical-align: text-bottom;
+}
+</style>
+<style type="text/css">
+#demo {
+	width: 300px;
+	height: 200px;
+	border: 1px solid gray;
+	overflow: auto;
+}
+
+</style>
+</head>
+<body onload="window_init();" onunload>
+<header class="sticky">
+<h1 class="main">
+	<a href="#" style="position: absolute;top:30px;">ky Home</a>
+</h1>
+<ul>
+	<li><a href="#">로그인</a></li>
+	<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<h3><span class="material-symbols-outlined">view_list</span> javascript days03</h3>
+<div>
+ <xmp class="code">
+  동적 요소 생성, 추가, 수정, 삭제
+  createElement()
+  appendChild() , insertBefore()
+    
+  replaceChild()
+  removeChild()
+  
+  hasChildNodes()
+ </xmp>
+  설문 조사 항목 갯수 :
+  <select name="count" id="count">
+  <option value="">선택...</option>
+<!--   option[value=$]*15>{$} -->
+  </select>
+  <p id="demo">
+  항목 1 : <input type="text" id="item1" class="box" /><br>
+  항목 2 : <input type="text" id="item2" class="box" /><br>
+  </p>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#count").change(function(){
+		var val = $("#count").val();		
+	});
+});
+ function window_init(){
+	var cmb = document.querySelector("#count");
+	/* for (var i = 1; i <= 50; i++) {
+		var op = document.createElement("option");
+		op.innerText = i;
+		op.setAttribute("value",i);
+		cmb.appendChild(op);	
+	}	 */
+// 	js Option() 생성자 > option 요소 생성
+	for (var i = 1; i <= 50; i++) {
+		cmb[i] = new Option(i,i);	
+	}
+}; 
+/*  document.querySelector("#count").onchange = function (){
+	 //alert("이벤트 확인");
+// 	 alert(this.selectedIndex);
+// 	alert(this.options[this.selectedIndex].text);
+// 	alert(this.options[this.selectedIndex].value);
+	let content = "";
+	let n = this.value;
+	for (var i = 1; i <= n; i++) {
+		content += "항목 "+ i +" : <input type='text' id='item"+i+"' class='box'><br>";
+	} 
+		
+	document.querySelector("#demo").innerHTML = content;
+	
+ } */ 
+document.querySelector("#count").onchange = function (){
+	
+	let n = this.value;
+	let p = document.querySelector("#demo");
+	p.innerHTML = "";
+	for (var i = 1; i <= n; i++) {
+		let txtbox = document.createElement("input");
+		txtbox.setAttribute("type","text");
+		txtbox.setAttribute("id","item"+i);
+		txtbox.setAttribute("class","box");
+		let content = "항목 " + i + " : ";
+		let no = document.createTextNode(content);
+		p.appendChild(no);
+		p.appendChild(txtbox);
+		p.appendChild(document.createElement("br")); 
+		
+		/* p.appendChild(no)
+		 .appendChild(txtbox)
+		 .appendChild(document.createElement("br")); */
+		
+	} 
+}
+</script>
+</body>
+</html>

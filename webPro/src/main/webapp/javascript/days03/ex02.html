@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<link rel="stylesheet" href="/webPro/resources/cdn-main/example.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/webPro/resources/cdn-main/example.js"></script>
+<style type="text/css">
+.material-symbols-outlined {
+	vertical-align: text-bottom;
+}
+</style>
+</head>
+<body>
+<header class="sticky">
+<h1 class="main">
+	<a href="#" style="position: absolute;top:30px;">ky Home</a>
+</h1>
+<ul>
+	<li><a href="#">로그인</a></li>
+	<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<h3><span class="material-symbols-outlined">view_list</span> javascript days03</h3>
+<div>
+ <xmp class="code">
+  [ keyevent ]
+  1) keydown  - 키보드 누를 때, 이벤트 취소 O, 기능키 O, 대소문자 X
+  2) keypress - 키보드 누를 때, 이벤트 취소 O, 기능키 X, 대소문자 O
+  3) keyup    - 키보드 놓을 때, 이벤트 취소 X
+ </xmp>
+
+<input type="text" id="txt01" class="full"
+onkeydown="txt01_keydown();"
+onkeypress="txt01_keypress();"
+onkeyup="txt01_keyup();"
+autofocus/>
+<input type="text" id="txt02" class="full"/>
+</div>
+<script type="text/javascript">
+let txtbox01 = document.querySelector("#txt01");
+let txtbox02 = document.querySelector("#txt02");
+function txt01_keyup(){
+// 	alert(event.type)
+// 	alert(event.keyCode)
+// 	txtbox02.value = String.fromCharCode( event.keyCode);		
+};	
+function txt01_keypress(){
+// 	alert(txtbox01.value);
+// 	if(event.keyCode == 13){
+// 		txtbox02.value = txtbox01.value;
+// 	}
+};
+function txt01_keydown(){
+//  alert(txtbox01.value);
+
+
+};
+</script>
+</body>
+</html>

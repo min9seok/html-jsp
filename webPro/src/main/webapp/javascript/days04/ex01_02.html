@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<link rel="stylesheet" href="/webPro/resources/cdn-main/example.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/webPro/resources/cdn-main/example.js"></script>
+<style type="text/css">
+.material-symbols-outlined {
+	vertical-align: text-bottom;
+}
+</style>
+</head>
+<body>
+<header class="sticky">
+<h1 class="main">
+	<a href="#" style="position: absolute;top:30px;">ky Home</a>
+</h1>
+<ul>
+	<li><a href="#">로그인</a></li>
+	<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<h3><span class="material-symbols-outlined">view_list</span> javascript days04</h3>
+<div>
+ <xmp class="code">
+
+ </xmp>
+
+</div>
+<script type="text/javascript">
+/* console.log( isNaN("123") ) //f Not a Number
+console.log( isNaN("12a3") ) //t 
+console.log( Number.isNaN("123") ) //f
+console.log( Number.isNaN("12a3") ) //f */ 
+</script>
+<script type="text/javascript">
+Number.isNaN("NaN");
+Number.isNaN(undefined);
+Number.isNaN({});
+Number.isNaN("blabla");
+Number.isNaN(true);
+Number.isNaN(null);
+Number.isNaN("37");
+Number.isNaN("37.37");
+Number.isNaN("");
+Number.isNaN(" ");
+
+isNaN("NaN"); // true
+isNaN(undefined); // true
+isNaN({}); // true
+isNaN("blabla"); // true
+isNaN(true); // false, this is coerced to 1
+isNaN(null); // false, this is coerced to 0
+isNaN("37"); // false, this is coerced to 37
+isNaN("37.37"); // false, this is coerced to 37.37
+isNaN(""); // false, this is coerced to 0
+isNaN(" "); // false, this is coerced to 0
+</script>
+</body>
+</html>

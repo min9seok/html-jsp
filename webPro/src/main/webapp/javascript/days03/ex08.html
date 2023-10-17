@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<link rel="stylesheet" href="/webPro/resources/cdn-main/example.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/webPro/resources/cdn-main/example.js"></script>
+<style type="text/css">
+.material-symbols-outlined {
+	vertical-align: text-bottom;
+}
+</style>
+<style>
+select {
+	width: 100px;
+	height: 200px;
+}
+#se {
+	text-align: center;
+}
+button {
+	width: 80px;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+<header class="sticky">
+<h1 class="main">
+	<a href="#" style="position: absolute;top:30px;">ky Home</a>
+</h1>
+<ul>
+	<li><a href="#">로그인</a></li>
+	<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<h3><span class="material-symbols-outlined">view_list</span> javascript days00</h3>
+<div>
+ <xmp class="code">
+
+ </xmp>
+<table>
+	<tr>
+		<td><select multiple name="leftcmb" id="leftcmb">
+		<option selected value="ky">ky</option>
+		<option value="ky1">ky1</option>
+		<option selected value="ky2">ky2</option>
+		<option value="ky3">ky3</option>
+		<option selected value="ky4">ky4</option>
+		</select>
+		</td>
+		<td id ="se">
+		<button id="in">▶</button><br>
+		<button id="all_in">▶▶</button><br>
+		<button id="back">◀</button><br>
+		<button id="all_back">◀◀</button><br>
+		</td>
+		<td><select multiple name="rightcmb" id="rightcmb">
+		</select>
+		</td>
+	</tr>
+</table>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+/* $("#in").click(function(){
+	let val = $("select[name=leftcmb] option:selected").val();	
+	if(val != 'undefined'){
+	$("#rightcmb").append("<option>"+val+"</option>");
+	}
+	$("leftcmb option[value="+val+"]").remove();
+});
+$("#all_in").click(function(){
+	let val = $("select[name=leftcmb] option").val();	
+	$("#rightcmb").append("<option>"+val+"</option>");
+	$("#leftcmb option").remove();
+});
+$("#back").click(function(){
+	let val = $("select[name=rightcmb] option:selected").val();
+	$("#leftcmb").append("<option>"+val+"</option>");
+});
+$("#all_back").click(function(){
+	let val = $("select[name=rightcmb] option:selected").val();
+	$("#rightcmb option").remove();
+}); */
+});
+//▶
+document.querySelector("button:first-of-type").onclick = function(){
+// 	alert("이벤트 확인");
+	let rightcmb = document.querySelector("#rightcmb");
+	let leftcmboption = document.querySelectorAll("#leftcmb option")
+// 	rightcmb.innerHTML = "";
+	rightcmb.options.length=0;
+	for (var i = 0, j = 0; i < leftcmboption.length; i++) {
+// 		console.log(leftcmboption[i].selected);
+		if(leftcmboption[i].selected == true){
+// 			let text = leftcmboption[i].text;
+// 			rightcmb[j++] = new Option(text);
+			rightcmb.appendChild(leftcmboption[i].cloneNode(true));
+		}
+	}
+}
+//▶▶
+document.querySelector("button:nth-of-type(2)").onclick = function(){
+	let rightcmb = document.querySelector("#rightcmb");
+	let leftcmboption = document.querySelectorAll("#leftcmb option")
+// 	rightcmb.options.length=0;
+	for (var i = 0, j = 0; i < leftcmboption.length; i++) {
+		if(leftcmboption[i].selected == true){
+// 			해당 하위 항목을 현재 위치에서 새 위치로 이동
+			rightcmb.appendChild(leftcmboption[i]);
+		}
+	}
+}
+</script>
+</body>
+</html>

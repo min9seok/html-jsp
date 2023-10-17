@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<link rel="stylesheet" href="/webPro/resources/cdn-main/example.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/webPro/resources/cdn-main/example.js"></script>
+<style type="text/css">
+.material-symbols-outlined {
+	vertical-align: text-bottom;
+}
+</style>
+</head>
+<body>
+<header class="sticky">
+<h1 class="main">
+	<a href="#" style="position: absolute;top:30px;">ky Home</a>
+</h1>
+<ul>
+	<li><a href="#">로그인</a></li>
+	<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<h3><span class="material-symbols-outlined">view_list</span> javascript days04</h3>
+<div>
+ <xmp class="code">
+  [ js 문자열 ]
+  - js '문자열' , "문자열"
+ </xmp>
+
+</div>
+<p id="demo"></p>
+<script type="text/javascript">
+let msg = "kim's Home";
+
+let a = 'i am "sam"';
+
+let b = `kim's  
+			"H"ome
+			message`;
+$("#demo").html(b);
+</script>
+<script type="text/javascript">
+let str1 = "hello world";
+// 성능 저하 (권장 X)
+let str2 = new String("hello world");
+// alert(typeof str1); // string
+// alert(typeof str2); // object
+// alert ( str1 == str2); // 두 문자열 비교 true
+alert ( str1 === str2); // 두 문자열+타입 비교 false
+</script>
+</body>
+</html>

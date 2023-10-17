@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<link rel="stylesheet" href="/webPro/resources/cdn-main/example.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/webPro/resources/cdn-main/example.js"></script>
+<style type="text/css">
+.material-symbols-outlined {
+	vertical-align: text-bottom;
+}
+</style>
+</head>
+<body>
+<header class="sticky">
+<h1 class="main">
+	<a href="#" style="position: absolute;top:30px;">ky Home</a>
+</h1>
+<ul>
+	<li><a href="#">로그인</a></li>
+	<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+ <h3><span class="material-symbols-outlined">view_list</span> javascript days00</h3>
+<div>
+ <xmp class="code">
+
+ </xmp>
+
+</div>
+<script type="text/javascript">
+
+
+//배열 요소 추가 (특정 위치에 추가) : splice()-잇다, 붙이다 / slice()-잘라내다
+const n =['d','a','f','c','e','b'];
+console.log(n)
+
+//n.splice(pos, amount) pos위치에서부터 amount만큼 제거
+//n.splice(2, 2) 
+
+//n.splice(pos 위치, amount 제거할 갯수, newelt 새로 추가할 요소)
+n.splice(2, 0,'x','y') // 제거하지 않고 요소 추가
+
+console.log(n)
+
+// 잘라내기 후 새로운 배열을 생성
+//const arr = n.slice(from, to);
+//const arr = n.slice(from);
+
+const arr = n.slice(2, 4)
+console.log(arr)
+console.log(n)//slice() 사용해도 원본 소스배열은 유지가 됨
+
+// 배열명.toString()
+// "[3,5]"
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var path = window.location.pathname;
+	var count = path.indexOf("/",10);
+	var at = path.slice(count,2);
+	at = path.substr(count+5,2);	
+	$("span").prepend(`javascript days${at}`);
+});
+</script>
+</body>
+</html>

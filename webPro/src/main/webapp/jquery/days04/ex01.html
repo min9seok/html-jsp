@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<link rel="stylesheet" href="/webPro/resources/cdn-main/example.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/webPro/resources/cdn-main/example.js"></script>
+<style type="text/css">
+.material-symbols-outlined {
+	vertical-align: text-bottom;
+}
+.test {
+	display: inline-block;
+	width: 70px;
+	text-align: center;
+}
+.input {
+	margin: 15px;
+}
+</style>
+</head>
+<body>
+<header class="sticky">
+<h1 class="main">
+	<a href="#" style="position: absolute;top:30px;">ky Home</a>
+</h1>
+<ul>
+	<li><a href="#">로그인</a></li>
+	<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<h3><span class="material-symbols-outlined">view_list</span> javascript days04</h3>
+<div>
+ <xmp class="code">
+    백틱 \${ }  앞에 \를 붙여야 되는 이유는 ? 
+    JSP에서 EL 표현과 충돌나기 때문이다. 
+ </xmp>
+<!-- <div class ="input"> -->
+<!-- <input id="first" type="text" autofocus/> -->
+<!-- <div class="test">+</div> -->
+<!-- <input id="second" disabled type="text"/> -->
+<!-- <div class="test">=</div> -->
+<!-- <input id="result" disabled type="text"/> -->
+<!-- </div> -->
+<div style="display:flex; justify-content: space-around;">
+   <input type="text"  autofocus>
+   + 
+   <input type="number" >
+   = 
+   <input type="text"  disabled> 
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	let n1, n2;
+// 	$("input[type=text]").first()
+	$(":text").first().keydown(function(event){
+		if(event.which == 13){ // event.keyCode
+			const regex = /^\d+$/;
+			if( regex.test( $(this).val() ) ){
+				$(this).next().focus();
+				n1 = parseInt($(this).val());	
+			}else{
+				$(this).select();
+			}
+			
+		}
+	});
+	$("input[type=number]").keydown(function(event){
+		if(event.which == 13){ // event.keyCode
+			n2 = parseInt($(this).val());		
+		$(this).next().val(n1+n2);
+		}
+	});
+}); 
+</script>
+</body>
+</html>

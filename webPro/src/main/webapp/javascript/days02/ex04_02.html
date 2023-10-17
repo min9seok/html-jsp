@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<link rel="stylesheet" href="/webPro/resources/cdn-main/example.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/webPro/resources/cdn-main/example.js"></script>
+<style type="text/css">
+.material-symbols-outlined {
+	vertical-align: text-bottom;
+}
+</style>
+</head>
+<body>
+<header class="sticky">
+<h1 class="main">
+	<a href="#" style="position: absolute;top:30px;">ky Home</a>
+</h1>
+<ul>
+	<li><a href="#">로그인</a></li>
+	<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<h3><span class="material-symbols-outlined">view_list</span> javascript days02</h3>
+<div>
+ <xmp class="code">
+   table[border=1 width=300]>tr*3>td*3>lorem1
+ </xmp>
+ <button>실행</button>
+ <p id="demo" style="border: 1px solid"></p>
+
+</div>
+<script type="text/javascript">
+var content ="";
+content += "<table border='1' style='width: 300px;'>";
+content += "<tr>                                      ";
+content += "	<td>Lorem.</td>                       ";
+content += "	<td>Corporis.</td>                    ";
+content += "	<td>Atque.</td>                       ";
+content += "</tr>                                     ";
+content += "<tr>                                      ";
+content += "	<td>Lorem.</td>                       ";
+content += "	<td>Eaque.</td>                       ";
+content += "	<td>Quidem?</td>                      ";
+content += "</tr>                                     ";
+content += "<tr>                                      ";
+content += "	<td>Lorem.</td>                       ";
+content += "	<td>Aliquam.</td>                     ";
+content += "	<td>Atque.</td>                       ";
+content += "</tr>                                     ";
+content += "</table>                                  ";
+document.querySelector("button").onclick = function(){
+	document.write(content);
+};
+
+</script>
+</body>
+</html>
