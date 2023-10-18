@@ -24,33 +24,26 @@
 	<li><a href="#">회원가입</a></li>
 </ul>
 </header>
-<h3><span class="material-symbols-outlined">view_list</span> javascript days04 lotto</h3>
+<h3><span class="material-symbols-outlined">view_list</span> javascript days05</h3>
 <div>
  <xmp class="code">
-
+ 	js Math 객체
+	0.0 <= Math.random() < 1.0
+	0.0 <= Math.random()*45 < 45.0
  </xmp>
-<button>로또 번호 발생기</button>
+
 </div>
 <p id="demo"></p>
 <script type="text/javascript">
-$(document).ready(function(){		
-	alert("1등은 나의 꿈");
-	$("button").click(function(event) {
-		let lotto =  new Set();		
-		while( lotto.size < 6 ){
-			const n = parseInt(Math.random()*45)+ 1; 
-			lotto.add( n );
-		}		
-	   	 let content = "<ul>";
-	   	lotto.forEach(function(elt, i, array) {
-			content += `<li>${elt}</li>`
-		})
-	   	 
-	     content += "</ul>";	     
-	     
-	     $("#demo").html(content);
-	});
-});
+ let content = "";
+ for (var i = 0; i < 10; i++) {
+// 	content += parseInt(Math.random()*45)+1 + "<br>";
+	content += Math.floor(Math.random()*45)+1 + "<br>";
+}
+$("#demo").html(content);
+function getRndInteger(min, max){
+	return Math.floor(Math.random()*(max-min+1) )+min;
+}
 </script>
 </body>
 </html>

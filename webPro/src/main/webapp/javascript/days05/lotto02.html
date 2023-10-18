@@ -32,20 +32,20 @@
  </xmp>
  로또 게임 횟수 선택 :
  <select name="lotto" id="lotto">
- 	<option value="">선택</option>
- 	<option value="1">1</option>
- 	<option value="2">2</option>
- 	<option value="3">3</option>
- 	<option value="4">4</option>
- 	<option value="5">5</option>
+<!--  	<option value="">선택</option> -->
+<!--  	<option value="1">1</option> -->
+<!--  	<option value="2">2</option> -->
+<!--  	<option value="3">3</option> -->
+<!--  	<option value="4">4</option> -->
+<!--  	<option value="5">5</option> -->
  </select><br>
 <button>로또 번호 발생기</button>
 </div>
 <p id="demo"></p>
 <script type="text/javascript">
-$(document).ready(function(){	
+/* $(document).ready(function(){	
 	alert("1등은 나의 꿈");
-	$("button").click(function(event) {
+	$("button").click(function() {
 		let val = $("select[name=lotto] option:selected").val();
 		if(val==""){
 			alert("다시 선택");			
@@ -60,13 +60,50 @@ $(document).ready(function(){
 		}  		  		
 	   	 let content = "<ul>";
 	   	lotto.forEach(function(elt, i, array) {
-			content += `<li>${elt}</li>`
+			content += `<li>${elt}</li>`;
 		})		 
 	     content += "</ul>";	     
 	     $("#demo").append(content);	     
 		}
 	     
 
+	});
+}); */
+</script>
+<script type="text/javascript">
+let num; // 게임 횟수
+let content="";
+function getRndInteger(min, max){
+	return Math.floor(Math.random()*(max-min+1) )+min;
+}
+$(document).ready(function(){	
+	alert("1등은 나의 꿈");
+	for (var i = 1; i <=20; i++) {
+		$("#lotto").append( $("<option></option>").text(i) );
+	}
+	$("button").click(function() {
+		$("#demo").html("");
+		content = "";
+		let lotto;
+		let lottos = [];
+		let n ; // 발생한 로또 번호
+		num = $("#lotto").val();
+		for (var i = 0; i < num; i++) {
+			lotto = new Set();
+			while (lotto.size < 6) {
+				n = getRndInteger(1, 45);
+				lotto.add(n);
+			}
+			lottos.push(lotto);			
+		}
+		lottos.forEach(function(elt, i, array) {
+		     content += `${(i+1)} 게임 : ` ;
+		     elt.forEach((n) => {
+		       content += `${n.toString().padStart(2, '0')}\t`;
+		     });     
+		       content += "<br>";
+		    })
+		  $("#demo").html(  content ) ;
 	});
 });
 </script>

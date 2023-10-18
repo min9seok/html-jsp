@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<link rel="stylesheet" href="/webPro/resources/cdn-main/example.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/webPro/resources/cdn-main/example.js"></script>
+<style type="text/css">
+.material-symbols-outlined {
+	vertical-align: text-bottom;
+}
+</style>
+<style>
+select {
+   width: 100px;
+   text-align: center;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+ul {
+   list-style-type: none;
+}
+
+body {
+   font-family: Verdana, sans-serif;
+}
+
+.month {
+   padding: 70px 25px;
+   width: 100%;
+   background: #1abc9c;
+   text-align: center;
+}
+
+.month ul {
+   margin: 0;
+   padding: 0;
+}
+
+.month ul li {
+   color: white;
+   font-size: 20px;
+   text-transform: uppercase;
+   letter-spacing: 3px;
+}
+
+.month .prev {
+   float: left;
+   padding-top: 10px;
+}
+
+.month .next {
+   float: right;
+   padding-top: 10px;
+}
+
+.weekdays {
+   margin: 0;
+   padding: 10px 0;
+   background-color: #ddd;
+}
+
+.weekdays li {
+   display: inline-block;
+   width: 13%;
+   color: #666;
+   text-align: center;
+}
+
+.days {
+   padding: 10px 0;
+   background: #eee;
+   margin: 0;
+}
+
+.days li {
+   list-style-type: none;
+   display: inline-block;
+   width: 13.6%;
+   text-align: center;
+   margin-bottom: 5px;
+   font-size: 12px;
+   color: #777;
+}
+
+.days li .active {
+   padding: 5px;
+   background: #1abc9c;
+   color: white !important
+}
+</style>
+</head>
+<body>
+<header class="sticky">
+<h1 class="main">
+	<a href="#" style="position: absolute;top:30px;">ky Home</a>
+</h1>
+<ul>
+	<li><a href="#">로그인</a></li>
+	<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<h3><span class="material-symbols-outlined">view_list</span> javascript days05</h3>
+<div>
+ <xmp class="code">
+
+ </xmp>
+<h3>달력(일정관리)</h3>
+<select id="syear" onchange="changeDate();"></select>
+<select id="smonth" onchange="changeDate();"></select>
+<select id="sdate"></select>
+<br><br>
+<div class="month">
+      <ul>
+         <li class="prev" onclick="changeCalendar(-1)">&#10094;</li>
+         <li class="next" onclick="changeCalendar(1)">&#10095;</li>
+         <li>
+         	  <span id="year"   style="font-size: 18px">2023</span>
+              <span id="month">10</span><br>               
+         </li>
+      </ul>
+</div>
+<ul class="weekdays">
+      <li>일</li>
+      <li>월</li>
+      <li>화</li>
+      <li>수</li>
+      <li>목</li>
+      <li>금</li>
+      <li>토</li>
+</ul>
+<ul class="days">  
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li>10</li>
+  <li>11</li>
+  <li>12</li>
+  <li>13</li>
+  <li>14</li>
+  <li>15</li>
+  <li>16</li>
+  <li>17</li>
+  <li>18</li>
+  <li>19</li>
+  <li>20</li>
+  <li>21</li>
+  <li>22</li>
+  <li>23</li>
+  <li>24</li>
+  <li>25</li>
+  <li>26</li>
+  <li>27</li>
+  <li>28</li>
+  <li>29</li>
+  <li>30</li>
+  <li>31</li>  
+</ul> 
+</div>
+<script>
+
+ var today = new Date();
+ var ty = today.getFullYear();
+ var tm = today.getMonth();
+ var td = today.getDate();
+ for (var i = 1970; i <= 2050; i++) {
+	$("#syear").append($("<option></option>").text(i));	
+ }
+ 	$("#syear").val(ty);
+ for (var i = 1; i <= 12; i++) {
+ 	$("#smonth").append($("<option></option>").text(i));	
+ } 	
+ 	$("#smonth").val(tm+1);  	  
+ for (var i = 1; i <= 31; i++) {
+ 	 $("#sdate").append($("<option></option>").text(i));	
+ } 	
+ 	 $("#sdate").val(td); 	
+
+</script>
+<script type="text/javascript">
+ function printCalendar(year,month){
+	$("#year").text(year+"년");
+	$("#month").text(month+"월");	 
+	
+	let dayOfWeek = getDayOfWeek(year, month, 1);
+	let lastDay = getLastDay(year,month);
+	$("ul.days").html("");
+	for (var i = 0; i < dayOfWeek; i++) {
+		$("ul.days").append($("<li></li>"));
+	}
+	let opd;
+	for (var i = 1; i <= lastDay; i++) {
+		opd = new Date(year,month-1,i);
+		if(opd.toLocaleDateString() == today.toLocaleDateString()){
+			$("ul.days").append(`<li><span class="active">${i}</span></li>`);
+		}else{
+			$("ul.days").append(`<li>${i}</li>`);
+		}
+	}
+ };
+ 
+ function getDayOfWeek(year,month,date) {
+	let d = new Date(year,month-1,date);
+	return d.getDay();
+ };
+ function getLastDay(year,month){
+	let d = new Date(year,month);
+	d.setDate(d.getDate()-1);
+	return d.getDate();
+ };
+ printCalendar(ty,tm+1);
+</script>
+<script type="text/javascript">
+ let year = $("#syear").val();
+ let month = $("#smonth").val();
+ function changeDate(){
+	 year = $("#syear").val();
+	 month = $("#smonth").val();
+	 let lastDay = getLastDay(year, month);
+	 $("#sdate").html("");
+	 for (var i = 1; i <= lastDay; i++) {
+		 $("#sdate").append($("<option></option>").text(i));
+	}
+	 printCalendar(year,month)
+ }
+ function changeCalendar(value){
+	 
+	month = Number(month) + value;
+	if(month == 0){
+		year--;
+		month = 12;
+	}else if(month == 13){
+		year++;
+		month = 1;
+	}
+	$("#syear").val(year);
+	$("#smonth").val(month);
+	changeDate(); 
+	 printCalendar(year,month)
+ }
+</script>
+</body>
+</html>
