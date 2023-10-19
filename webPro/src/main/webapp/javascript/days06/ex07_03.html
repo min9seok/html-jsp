@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<link rel="stylesheet" href="/webPro/resources/cdn-main/example.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/webPro/resources/cdn-main/example.js"></script>
+<style type="text/css">
+.material-symbols-outlined {
+	vertical-align: text-bottom;
+}
+</style>
+</head>
+<body>
+<header class="sticky">
+<h1 class="main">
+	<a href="#" style="position: absolute;top:30px;">ky Home</a>
+</h1>
+<ul>
+	<li><a href="#">로그인</a></li>
+	<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<h3><span class="material-symbols-outlined">view_list</span> javascript days06</h3>
+<div>
+ <xmp class="code">
+  [js 중첩 함수 이해]
+  1. 모든 함수에서 전역변수 접근 가능
+  2. js에서는 모든 함수가 상위 범위에 접근할 수 있다.
+ </xmp>
+ <button>counter</button>
+<p id="demo"></p>
+</div>
+<script type="text/javascript">
+// function add() {
+// 	let counter = 0; // 지역변수	
+// 	function plus() {		
+// 		counter++;		
+// 	}	
+// 	plus();
+// 	return counter;
+// }
+// $("button").click(function(){
+// 	$("#demo").html( add() );	
+// });
+// 버튼 클릭 > add() 호출 > 중첩함수 plus() counter 1증가 > return 
+
+// [문제제시] 함수 클로저
+// add() 호출 X > plus() 중첩함수 호출
+//  counter 
+//  지역변수 > 전역변수
+//  폐쇄 한번 초기화
+</script>
+<script type="text/javascript">
+// add() X
+// plus() 중첩함수 호출
+// [자체 호출 함수 이용]
+ var plus = (function(){  // add()
+	let counter = 0;	
+	return function(){ // 중첩함수 plus()
+		counter++;		
+		return counter;		
+	};
+	
+ })();
+$("button").click(function(){
+	$("#demo").html( plus() );	
+});
+</script>
+</body>
+</html>

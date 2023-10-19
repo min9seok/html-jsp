@@ -40,8 +40,22 @@
 <p id="demo"></p>
 <script>
 $(document).ready(function(){
-	$("button").click(function(){		
-		$("#demo").html();
+	$("button").click(function(){
+		var rrn = $("#rrn").val();
+		var ry  = rrn.substr(0,2);
+		var rmd = rrn.substr(2,4);		
+		var today = new Date();
+		var y = today.getFullYear();
+		var m = today.getMonth()+1;
+		var d = today.getDate();
+		var md = String(m)+d;
+		ry = Number(ry)+1900;
+		$("#demo").html("");
+		if(md-rmd>0){			
+			$("#demo").html(y-ry);
+		}else{			
+			$("#demo").html(y-ry)-1;
+		}
 	});
 });
 </script>
