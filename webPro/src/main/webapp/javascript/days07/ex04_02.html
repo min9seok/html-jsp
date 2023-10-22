@@ -1,0 +1,12 @@
+<!--  네이버 메인 화면 따오면 됨 -->
+<script type="text/javascript">
+ // 네이버 메인 페이지 모든 링크 정보 조회
+ alert( document.links.length);
+ let n =1;
+ for (let link of document.links ) {
+	 let href = link.href;
+	 let text = link.text;
+	 document.write(`${n++} : ${href} - ${text}<br>`);	 
+}
+</script>        
+            

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<link rel="stylesheet" href="/webPro/resources/cdn-main/example.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/webPro/resources/cdn-main/example.js"></script>
+<style type="text/css">
+.material-symbols-outlined {
+	vertical-align: text-bottom;
+}
+</style>
+</head>
+<body>
+<header class="sticky">
+<h1 class="main">
+	<a href="#" style="position: absolute;top:30px;">ky Home</a>
+</h1>
+<ul>
+	<li><a href="#">로그인</a></li>
+	<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<h3><span class="material-symbols-outlined">view_list</span> javascript days07</h3>
+<div>
+ <xmp class="code">
+  [BOM]
+  2. screen 객체
+  - 사용자 화면에 대한 정보를 가지고 있는 객체
+  screen.width 화면 너비 ( 단위 픽셀 )
+  screen.height 화면 높이
+  screen.availWidth: 실제 사용 가능한 화면 너비 (작업 표시줄 기능 제외)
+  screen.availHeight:    ''          높이
+  screen.colorDepth: 색 농도
+ </xmp>
+<p id="demo"></p>
+<button onclick="history.back();">이전 주소로 이동</button>
+
+</div>
+<script>
+ let output = `
+ ${screen.width} / ${screen.height}
+ ${screen.availWidth} / ${screen.availHeight}
+ ${screen.colorDepth}`;
+ $("#demo").html(output);
+</script>
+</body>
+</html>

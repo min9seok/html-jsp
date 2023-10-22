@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<link rel="stylesheet" href="/webPro/resources/cdn-main/example.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/webPro/resources/cdn-main/example.js"></script>
+<style type="text/css">
+.material-symbols-outlined {
+	vertical-align: text-bottom;
+}
+</style>
+</head>
+<body>
+<header class="sticky">
+<h1 class="main">
+	<a href="#" style="position: absolute;top:30px;">ky Home</a>
+</h1>
+<ul>
+	<li><a href="#">로그인</a></li>
+	<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<h3><span class="material-symbols-outlined">view_list</span> javascript days07</h3>
+<div>
+ <xmp class="code">
+
+ </xmp>
+<p id="demo"></p>
+</div>
+<script>
+//  const myNumbers = [4,1,-20,-7,5,9,-6];
+ 
+// function removeNeg(numbers) { // 0보다 작은값 제거
+// 	const myArray = [];
+// 	for (let n of numbers) {
+// 		if(n >= 0){
+// 			myArray.push(n);
+// 		}
+// 	}	
+// 	return myArray;
+// }
+//  const resultarr = removeNeg(myNumbers);
+//  $("#demo").html(resultarr.join("/"));
+</script>
+<script>
+//  const myNumbers = [4,1,-20,-7,5,9,-6];
+ 
+// function removeNeg(numbers,callback) { // 0보다 작은값 제거
+// 	const myArray = [];
+// 	for (let n of numbers) {
+// 		if(callback(n)){
+// 			myArray.push(n);
+// 		}
+// 	}	
+// 	return myArray;
+// }
+// function test(n){
+// 	return n>=0;	
+// }
+//  const resultarr = removeNeg(myNumbers,test);
+//  $("#demo").html(resultarr.join("/"));
+</script>
+<script>
+ const myNumbers = [4,1,-20,-7,5,9,-6];
+ 
+function removeNeg(numbers,callback) { // 0보다 작은값 제거
+	const myArray = [];
+	for (let n of numbers) {
+		if(callback(n)){
+			myArray.push(n);
+		}
+	}	
+	return myArray;
+}
+
+ const resultarr = removeNeg(myNumbers,(n)=>n>=0);
+ $("#demo").html(resultarr.join("/"));
+</script>
+</body>
+</html>

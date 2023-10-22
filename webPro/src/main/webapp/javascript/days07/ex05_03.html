@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<link rel="stylesheet" href="/webPro/resources/cdn-main/example.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/webPro/resources/cdn-main/example.js"></script>
+<style type="text/css">
+.material-symbols-outlined {
+	vertical-align: text-bottom;
+}
+</style>
+</head>
+<body onunload="windowClose();">
+<header class="sticky">
+<h1 class="main">
+	<a href="#" style="position: absolute;top:30px;">ky Home</a>
+</h1>
+<ul>
+	<li><a href="#">로그인</a></li>
+	<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<h3><span class="material-symbols-outlined">view_list</span> javascript days07</h3>
+<div>
+ <xmp class="code">
+
+ </xmp>
+<table border="1" style="width:100%">
+   <tr>
+      <td>절대위치</td>
+      <td onclick="fn_moveto()">moveTo()</td>
+   </tr>
+   <tr>
+      <td>상대위치</td>
+      <td onclick="fn_moveby()">moveBy()</td>
+   </tr>
+   <tr>
+      <td>절대크기</td>
+      <td onclick="fn_resizeto()">resizeTo</td>
+   </tr>
+   <tr>
+      <td>상대크기</td>
+      <td onclick="fn_resizeby()">resizeBy</td>
+   </tr>
+   <tr>
+      <td><button onclick="win_shake();">창 흔들기</button></td>
+      <td><button onclick="win_close();">창 닫기</button></td>
+   </tr>
+</table>
+</div>
+<script>
+function windowClose() {
+	$(opener.location).attr("href", "javascript:windowClose();");
+}
+function fn_moveto(){
+	moveTo(10,10);
+}
+function fn_moveby(){
+	moveBy(10,10);	
+}
+function fn_resizeto(){
+	resizeTo(300,300);
+}
+function fn_resizeby(){
+	resizeBy(10,10);	
+}
+function win_shake(){
+	
+}
+function win_close(){
+	
+}
+</script>
+</body>
+</html>

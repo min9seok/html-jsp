@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<link rel="stylesheet" href="/webPro/resources/cdn-main/example.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/webPro/resources/cdn-main/example.js"></script>
+<style type="text/css">
+.material-symbols-outlined {
+	vertical-align: text-bottom;
+}
+</style>
+</head>
+<body>
+<header class="sticky">
+<h1 class="main">
+	<a href="#" style="position: absolute;top:30px;">ky Home</a>
+</h1>
+<ul>
+	<li><a href="#">로그인</a></li>
+	<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<h3><span class="material-symbols-outlined">view_list</span> javascript days07</h3>
+<div>
+ <xmp class="code">
+  [js 컬렉션 객체]
+  1. options 
+  2. forms
+  3. arguments
+  
+  4. elements
+  
+  ex04_02.html
+  5. images
+  6. links
+ </xmp>
+   <form id="form1" name="form1" action="">
+    Name : <input type="text" name="name" value="admin" />
+    <br>
+    Age : <input type="text" name="age" value="20" />
+    <br>
+    Email : <input type="email" name="email" value="admin@naver.com" />  
+     <button type="button" value="ok">확인</button>
+  </form>  
+
+  <p id="demo"></p>
+</div>
+<script>
+$("button").click(function(){
+// 	document.getElementById("form1");
+// 	document.querySelector("#form1");
+ let form1 = document.forms["form1"];
+ for (let elemt of form1.elements) {
+	$("#demo").html(function(index,oldhtml){
+		return oldhtml + `<br>${elemt.value}`;
+	});
+}
+});
+</script>
+<script type="text/javascript">
+ // 네이버 메인 페이지 모든 이미지 정보 조회
+ alert( document.images.length);
+ let n =1;
+ for (let img of document.images ) {
+	 let src = img.src;
+	 document.write(`${n++} : ${src}<br>`);
+	 img.src = "#";
+}
+</script>
+<script type="text/javascript">
+ // 네이버 메인 페이지 모든 링크 정보 조회
+ alert( document.links.length);
+ let n =1;
+ for (let link of document.links ) {
+	 let href = link.href;
+	 let text = link.text;
+	 document.write(`${n++} : ${href} - ${text}<br>`);	 
+}
+</script>
+</body>
+</html>
