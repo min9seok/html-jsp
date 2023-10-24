@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<link rel="stylesheet" href="/webPro/resources/cdn-main/example.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/webPro/resources/cdn-main/example.js"></script>
+<style type="text/css">
+.material-symbols-outlined {
+	vertical-align: text-bottom;
+}
+</style>
+<script type="text/javascript">
+$(function(){
+// jQuery.protorype == jQuery.fn
+// $ == jQuery == window.jQuery 
+$("p").css({
+	"border" : "1px solid red"
+   ,"padding" : "10px"   
+}).on("click",function(){
+	$(this).hide(1000);
+});
+});
+</script>
+</head>
+<body>
+<header class="sticky">
+<h1 class="main">
+	<a href="#" style="position: absolute;top:30px;">ky Home</a>
+</h1>
+<ul>
+	<li><a href="#">로그인</a></li>
+	<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<h3><span class="material-symbols-outlined">view_list</span> javascript days08</h3>
+<div>
+ <xmp class="code">
+  문서가 로딩되기 전에 jquery 코드가 실행되면 적용되지 않는다
+  
+  $ 는 js 변수를 선언할 때 사용 가능한 기호
+  다른 js 라이브러리(프레임워크)을 jquery와 함께 사용하다보면 $ 충돌이 발생할 수 있다.
+  
+  jQuery의 $ 와
+  다른 js 라이브러리 $ 가 충돌
+  
+  noConflict() 메서드를 사용해서
+  $ 식별자를 jquery에서 사용하지 않도록 설정하는 메서드
+ </xmp>
+<p>Lorem ipsum dolor sit amet.</p>
+<p>Labore optio illo eum atque.</p>
+<p>Accusamus id quae iste in!</p>
+<p>Pariatur ipsam cupiditate voluptates nisi!</p>
+<p>Deleniti necessitatibus culpa mollitia laudantium!</p>
+<p>Facilis minima aspernatur dignissimos tenetur!</p>
+<p>Architecto soluta repudiandae perspiciatis placeat?</p>
+<p>Necessitatibus fuga porro quasi in.</p>
+<p>Impedit deleniti non quisquam rerum!</p>
+<p>Reprehenderit quibusdam quaerat eveniet voluptas.</p>
+</div>
+<script>
+//  $ 약식기호 == 식별자 > jquery 사용
+//  $.noConflict(); // $ 약식기호 해제
+//  jQuery(document).ready(function(){
+// 	jQuery("p").css(); 
+//  });
+</script>
+<script type="text/javascript">
+// var jq = $.noConflict(); // $ 약식기호 해제
+// jq(document).ready(function(){
+// 	jq("p").css(); 
+// });
+</script>
+<script type="text/javascript">
+$.noConflict(); // $ 약식기호 해제
+jQuery(document).ready(function($){ // jquery 코딩 블럭 내 에서는 $ 가능
+// 	$("p")	 
+});
+
+</script>
+</body>
+</html>

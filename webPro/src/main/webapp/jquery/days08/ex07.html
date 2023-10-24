@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" href="http://localhost/webPro/images/SiSt.ico">
+<link rel="stylesheet" href="/webPro/resources/cdn-main/example.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/webPro/resources/cdn-main/example.js"></script>
+<style type="text/css">
+.material-symbols-outlined {
+	vertical-align: text-bottom;
+}
+</style>
+</head>
+<body>
+<header class="sticky">
+<h1 class="main">
+	<a href="#" style="position: absolute;top:30px;">ky Home</a>
+</h1>
+<ul>
+	<li><a href="#">로그인</a></li>
+	<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<h3><span class="material-symbols-outlined">view_list</span> javascript days08</h3>
+<div>
+ <xmp class="code">
+  [click 이벤트]
+  btn.click(function(){})
+  btn.on("이벤트명",function(){})
+  btn.one
+  btn.off
+ </xmp>
+<button id="one">One</button>
+<button id="bind">Add Click</button>
+<button id="unbind">Remove Click</button>
+
+<div id="box" style="display:none;">Click!!!</div>
+</div>
+<script type="text/javascript">
+function flash(){
+	$("#box").css("color","red").show().fadeOut(4000);
+}
+$("#bind").click(function(){
+// 	flash();
+// 	$("#one").click(function(){
+// 		flash();
+// 	});
+	$("body").on("click","#one",flash) // $("body #one")
+	.find("#one").text("Can Click");
+});
+
+$("#unbind").click(function(){
+	$("body").off("click","#one",flash) // $("body #one")
+	.find("#one").text("One");
+});
+</script>
+<script>
+// $("#one").one("click",function(){
+// 	alert("asd");
+// });
+</script>
+<script type="text/javascript">
+// $("#one").on({
+// 	 click:function(){}
+// 	,mousedown:function(){}
+// 	,keydown:function(){}
+// });
+</script>
+</body>
+</html>
